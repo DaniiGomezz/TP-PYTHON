@@ -31,3 +31,5 @@ resultado = obtener_numero(matriz, fila, columna)
 
 # Imprime el número obtenido y su posición en la matriz.
 print(f"El número en la posición ({fila + 1}, {columna + 1}) es: {resultado}")
+
+assert obtener_numero(5, 2) == 18, "Error en el caso de prueba"
