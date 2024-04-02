@@ -15,30 +15,27 @@ Constraints:
 6
 """
 
-# assert weird_algorithm(3) == [3, 10, 5, 16, 8, 4, 2, 1], "Error en
-# el caso de prueba"
-
-
-
-
-
-
-
-
-
-
 numeroPositivo = int(input("ingrese un numero positivo: "))
+# definimos una función llamada parEimpar que toma un número positivo como entrada.
 def parEimpar(numeroPositivo):
+    # Inicializa una lista con el número positivo inicial como su único elemento.
     par_impar_secuencia = [numeroPositivo]
 
+    # Mientras el número positivo sea mayor que 1, realiza lo siguiente:
     while numeroPositivo > 1:
+        # Si el número positivo es par pasa a dividirse entre 2.
         if numeroPositivo % 2 == 0:
             numeroPositivo //= 2
+        # Si el número positivo es impar pasa a multiplicar por 3 y le suma 1.
         else:
             numeroPositivo = numeroPositivo * 3 + 1
+        # Agrega el nuevo valor de numeroPositivo a la lista.
         par_impar_secuencia.append(numeroPositivo)
     
+    # Retorna la lista que contiene la secuencia de los números generados.
     return par_impar_secuencia
 
+# Imprime la secuencia de números resultante al llamar a la función parEimpar con el númeroPositivo ingresado por el usuario.
 
 print(parEimpar(numeroPositivo))
+assert parEimpar(3) == [3, 10, 5, 16, 8, 4, 2, 1], "Error en el caso de prueba"
