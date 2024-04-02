@@ -32,3 +32,5 @@ def encontrar_numero_faltante(n, numeros):
 
 # Imprime el número faltante llamando a la función 'encontrar_numero_faltante' con los parámetros 'n' y 'numeros'.
 print("El número que falta es:", encontrar_numero_faltante(n, numeros))
+
+assert encontrar_numero_faltante(4, [1, 3, 2]) == 4, "Error en el caso de prueba"
