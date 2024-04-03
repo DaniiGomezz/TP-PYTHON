@@ -37,7 +37,7 @@ def palindrome_reorder(s):
     else:
         return half_palindrome + odd_char + half_palindrome[::-1]
 
-cadena = "abbca"
-print(palindrome_reorder(cadena)) 
+cadena = "AABBC"
+print(palindrome_reorder(cadena.lower())) 
 
 assert palindrome_reorder("aabbc") == "abcba", "Error en el casode prueba"
