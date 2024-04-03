@@ -10,10 +10,10 @@ Output:
 Retornar el número que falta.
 """
 # Solicita al usuario que ingrese cuántos elementos habrá en la lista
-n = int(input("Ingrese cuántos elementos habrá en la lista: "))
+n = int(input("Ingrese cuántos elementos habrá en la lista (solo numeros positivos): "))
 
 # Solicita al usuario que ingrese los números faltantes separados por comas
-numeros = input("Ingrese los números faltantes separados por comas, por ejemplo: 2, 3, 4: ")
+numeros = input("Ingrese los números de la lista con comas, por ejemplo: 2, 3, 4 (solo numeros positivos): ")
 
 # Divide la cadena de números ingresada por el usuario en una lista de cadenas utilizando la coma como separador,
 # luego convierte cada cadena en la lista en un entero y crea una lista de enteros.
@@ -21,6 +21,12 @@ numeros = [int(x) for x in numeros.split(",")]
 
 # Define una función llamada 'encontrar_numero_faltante' que toma dos parámetros, 'n' y 'numeros'.
 def encontrar_numero_faltante(n, numeros):
+    
+    if n <= 0:
+        return "Error, debes ingresar un número positivo"
+    if numeros <= 0:
+        return "Error, debes ingresar un número positivo"
+      
     # Calcula la suma total utilizando la fórmula de la sumatoria.
     sumatoria = n * (n + 1) // 2
     # Calcula la suma de los números dados por el usuario.

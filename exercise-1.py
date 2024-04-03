@@ -20,7 +20,11 @@ numeroPositivo = int(input("ingrese un numero positivo: "))
 def parEimpar(numeroPositivo):
     # Inicializa una lista con el número positivo inicial como su único elemento.
     par_impar_secuencia = [numeroPositivo]
-
+    
+    if numeroPositivo <= 0:
+        return "Error, debes ingresar un número positivo"
+    if  numeroPositivo > 10**6:
+        return "Error, sobrepasa el límite de 10^6"
     # Mientras el número positivo sea mayor que 1, realiza lo siguiente:
     while numeroPositivo > 1:
         # Si el número positivo es par pasa a dividirse entre 2.
