@@ -9,7 +9,7 @@ El segundo parámetro contiene “n” números. Cada número es único y está 
 Output:
 Retornar el número que falta.
 """
-# Solicita al usuario que ingrese cuántos elementos habrá en la lista
+# Solicita al usuario que ingrese cuántos elementos habrá en la lista       
 n = int(input("Ingrese cuántos elementos habrá en la lista (solo numeros positivos): "))
 
 # Solicita al usuario que ingrese los números faltantes separados por comas
@@ -20,13 +20,9 @@ numeros = input("Ingrese los números de la lista con comas, por ejemplo: 2, 3, 
 numeros = [int(x) for x in numeros.split(",")]
 
 # Define una función llamada 'encontrar_numero_faltante' que toma dos parámetros, 'n' y 'numeros'.
-def encontrar_numero_faltante(n, numeros):
+def missing_number(n, numeros):
     
-    if n <= 0:
-        return "Error, debes ingresar un número positivo"
-    if numeros <= 0:
-        return "Error, debes ingresar un número positivo"
-      
+
     # Calcula la suma total utilizando la fórmula de la sumatoria.
     sumatoria = n * (n + 1) // 2
     # Calcula la suma de los números dados por el usuario.
@@ -37,6 +33,11 @@ def encontrar_numero_faltante(n, numeros):
     return numero_perdido
 
 # Imprime el número faltante llamando a la función 'encontrar_numero_faltante' con los parámetros 'n' y 'numeros'.
-print("El número que falta es:", encontrar_numero_faltante(n, numeros))
+print("El número que falta es:", missing_number(n, numeros))
 
-assert encontrar_numero_faltante(4, [1, 3, 2]) == 4, "Error en el caso de prueba"
+assert missing_number(4, [1, 3, 4]) == 2, "Error en el caso de prueba"
+assert missing_number(3, [1, 3]) == 2, "Error en el caso de prueba"
+assert missing_number(5, [1, 2, 4, 5]) == 3, "Error en el caso de prueba"
+
+
+print("todos los casos pasaron la prueba correctamente")

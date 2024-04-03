@@ -17,7 +17,7 @@ Constraints:
 
 numeroPositivo = int(input("ingrese un numero positivo: "))
 # definimos una función llamada parEimpar que toma un número positivo como entrada.
-def parEimpar(numeroPositivo):
+def weird_algorithm(numeroPositivo):
     # Inicializa una lista con el número positivo inicial como su único elemento.
     par_impar_secuencia = [numeroPositivo]
     
@@ -39,7 +39,10 @@ def parEimpar(numeroPositivo):
     # Retorna la lista que contiene la secuencia de los números generados.
     return par_impar_secuencia
 
-# Imprime la secuencia de números resultante al llamar a la función parEimpar con el númeroPositivo ingresado por el usuario.
+# Imprime la secuencia de números resultante al llamar a la función weir con el númeroPositivo ingresado por el usuario.
 
-print(parEimpar(numeroPositivo))
-assert parEimpar(3) == [3, 10, 5, 16, 8, 4, 2, 1], "Error en el caso de prueba"
+print(weird_algorithm(numeroPositivo))
+assert weird_algorithm(20) == [20, 10, 5, 16, 8, 4, 2, 1], "Error en el caso de prueba"
+assert weird_algorithm(3) == [3, 10, 5, 16, 8, 4, 2, 1], "Error en el caso de prueba"
+assert weird_algorithm(5) == [5, 16, 8, 4, 2, 1], "Error en el caso de prueba"
+print("todos los casos de pruebas han pasado correctamente")

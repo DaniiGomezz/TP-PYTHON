@@ -11,7 +11,7 @@ matriz = np.array([
 ])
 
 # Definimos una función llamada obtener_numero que toma dos parámetros: fila y columna.
-def obtener_numero(fila, columna):
+def number_spiral(fila, columna):
     # Comprueba si la fila o columna están fuera de los límites de la matriz.
     if fila < 1 or fila > 5 or columna < 1 or columna > 5:
         return "La posición está fuera de los límites de la matriz."
@@ -24,12 +24,15 @@ def obtener_numero(fila, columna):
 fila = int(input("Ingrese el número de fila (1-5): ")) 
 columna = int(input("Ingrese el número de columna (1-5): ")) 
 
-# Llama a la función 'obtener_numero' con los parámetros dados y almacena el resultado.
-resultado = obtener_numero(fila, columna)
+# Llama a la función obtener_numero con los parámetros dados y almacena el resultado.
+resultado = number_spiral(fila, columna)
 
 # Imprime el número obtenido y su posición en la matriz.
 print(f"El número en la posición ({fila}, {columna}) es: {resultado}")
 
-# Prueba de la función con una aserción.
-assert obtener_numero(5, 2) == 18, "Error en el caso de prueba"
+# Test
+assert number_spiral(2, 2) == 3, "Error en el caso deprueba"
+assert number_spiral(5, 2) == 18, "Error en el caso de prueba"
+assert number_spiral(3, 5) == 23, "Error en el caso de prueba"
 
+print("todos los casos de prueba pasaron correctamente")
