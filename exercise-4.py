@@ -41,5 +41,3 @@ cadena = "abbca"
 print(palindrome_reorder(cadena)) 
 
 assert palindrome_reorder("aabbc") == "abcba", "Error en el casode prueba"
-
-# En este punto me hice de ayuda de la herramienta chat gpt ya que no sabia hacer el desarrollo de la misma
